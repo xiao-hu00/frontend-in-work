@@ -18,12 +18,15 @@
   -->
 
   <div>顶部，搞logo，搞搜索</div>
-
   <div>侧边栏，搞菜单</div>
   <main>
     主要的微服务展示区域：
     <route default>
       <application name="@test-spa/test-react-app"></application>
+    </route>
+    <route path="/app2">
+      <div>app2：</div>
+      <application name="@test-spa/spa2-app"></application>
     </route>
   </main>
 </single-spa-router>
