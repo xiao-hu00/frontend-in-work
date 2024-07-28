@@ -689,6 +689,130 @@ importers:
         specifier: ^5.8.0
         version: 5.10.0
 
+  spa-apps/react-spa2:
+    dependencies:
+      '@types/jest':
+        specifier: ^27.0.1
+        version: 27.5.2
+      '@types/react':
+        specifier: ^17.0.19
+        version: 17.0.80
+      '@types/react-dom':
+        specifier: ^17.0.9
+        version: 17.0.25
+      '@types/systemjs':
+        specifier: ^6.1.1
+        version: 6.13.5
+      '@types/webpack-env':
+        specifier: ^1.16.2
+        version: 1.18.5
+      react:
+        specifier: ^17.0.2
+        version: 17.0.2
+      react-dom:
+        specifier: ^17.0.2
+        version: 17.0.2(react@17.0.2)
+      single-spa:
+        specifier: ^5.9.3
+        version: 5.9.5
+      single-spa-react:
+        specifier: ^4.3.1
+        version: 4.6.1(@types/react-dom@17.0.25)(@types/react@17.0.80)(react@17.0.2)
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.23.3
+        version: 7.24.9
+      '@babel/eslint-parser':
+        specifier: ^7.23.3
+        version: 7.25.0(@babel/core@7.24.9)(eslint@7.32.0)
+      '@babel/plugin-transform-runtime':
+        specifier: ^7.23.3
+        version: 7.24.7(@babel/core@7.24.9)
+      '@babel/preset-env':
+        specifier: ^7.23.3
+        version: 7.25.0(@babel/core@7.24.9)
+      '@babel/preset-react':
+        specifier: ^7.23.3
+        version: 7.24.7(@babel/core@7.24.9)
+      '@babel/preset-typescript':
+        specifier: ^7.23.3
+        version: 7.24.7(@babel/core@7.24.9)
+      '@babel/runtime':
+        specifier: ^7.23.3
+        version: 7.25.0
+      '@testing-library/jest-dom':
+        specifier: ^5.17.0
+        version: 5.17.0
+      '@testing-library/react':
+        specifier: ^12.0.0
+        version: 12.1.5(react-dom@17.0.2)(react@17.0.2)
+      babel-jest:
+        specifier: ^27.5.1
+        version: 27.5.1(@babel/core@7.24.9)
+      concurrently:
+        specifier: ^6.2.1
+        version: 6.5.1
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      eslint:
+        specifier: ^7.32.0
+        version: 7.32.0
+      eslint-config-prettier:
+        specifier: ^8.3.0
+        version: 8.10.0(eslint@7.32.0)
+      eslint-config-ts-react-important-stuff:
+        specifier: ^3.0.0
+        version: 3.0.0(eslint@7.32.0)
+      eslint-plugin-prettier:
+        specifier: ^3.4.1
+        version: 3.4.1(eslint-config-prettier@8.10.0)(eslint@7.32.0)(prettier@2.8.8)
+      husky:
+        specifier: ^7.0.2
+        version: 7.0.4
+      identity-obj-proxy:
+        specifier: ^3.0.0
+        version: 3.0.0
+      jest:
+        specifier: ^27.5.1
+        version: 27.5.1
+      jest-cli:
+        specifier: ^27.5.1
+        version: 27.5.1
+      prettier:
+        specifier: ^2.3.2
+        version: 2.8.8
+      pretty-quick:
+        specifier: ^3.1.1
+        version: 3.3.1(prettier@2.8.8)
+      ts-config-single-spa:
+        specifier: ^3.0.0
+        version: 3.0.0
+      typescript:
+        specifier: ^4.3.5
+        version: 4.9.5
+      webpack:
+        specifier: ^5.89.0
+        version: 5.93.0(webpack-cli@4.10.0)
+      webpack-cli:
+        specifier: ^4.10.0
+        version: 4.10.0(webpack-dev-server@4.15.2)(webpack@5.93.0)
+      webpack-config-single-spa-react:
+        specifier: ^4.0.0
+        version: 4.0.5(@babel/core@7.24.9)(webpack@5.93.0)
+      webpack-config-single-spa-react-ts:
+        specifier: ^4.0.0
+        version: 4.0.5(@babel/core@7.24.9)(typescript@4.9.5)(webpack@5.93.0)
+      webpack-config-single-spa-ts:
+        specifier: ^4.0.0
+        version: 4.1.4(@babel/core@7.24.9)(typescript@4.9.5)(webpack@5.93.0)
+      webpack-dev-server:
+        specifier: ^4.0.0
+        version: 4.15.2(webpack-cli@4.10.0)(webpack@5.93.0)
+      webpack-merge:
+        specifier: ^5.8.0
+        version: 5.10.0
+
   spa-basis/root-config:
     dependencies:
       '@types/jest':
