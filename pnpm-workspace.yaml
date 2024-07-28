@@ -1,4 +1,4 @@
 packages:
   - 'project-apps/*'
   - 'spa-apps/*'
-  - 'spa-basis
+  - 'spa-basis/*'
