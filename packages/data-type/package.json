@@ -1,0 +1,12 @@
+{
+  "name": "@react/data-type",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "node index.js"
+  },
+  "dependencies": {
+    "quicktype-core": "^23.0.80"
+  }
+}
