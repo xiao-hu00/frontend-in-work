@@ -1,2 +1,4 @@
 packages:
-  - 'packages/*'
+  - 'project-apps/*'
+  - 'spa-apps/*'
+  - 'spa-basis/*'
