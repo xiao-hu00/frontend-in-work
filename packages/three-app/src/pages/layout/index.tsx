@@ -4,7 +4,8 @@ import './index.css'
 import classnames from 'classnames'
 
 const navList = [
-  { title: '地球', path: '/', active: true },
+  { title: '首页', path: '/', active: true },
+  { title: '地球', path: '/sphere', active: false },
   { title: '地图', path: '/map', active: false },
   { title: '模型', path: '/glb', active: false },
   { title: '动画', path: '/animate', active: false },
