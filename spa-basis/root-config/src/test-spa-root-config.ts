@@ -17,5 +17,15 @@ const applications = constructApplications({
 const layoutEngine = constructLayoutEngine({ routes, applications })
 
 applications.forEach(registerApplication)
+
+System.import('single-spa').then(({ registerApplication, start }) => {
+  registerApplication({
+    name: '@test-spa/test-react-app',
+    app: () => System.import('@test-spa/test-react-app'),
+    activeWhen: (location) => location.pathname.startsWith('/app1'),
+  });
+  start()
+})
+
 layoutEngine.activate()
 start()
