@@ -1,48 +1,62 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Loading from '@/components/Loading'
-import Home from '@/pages/home'
+import Sphere from '@/pages/sphere'
 import Layout from '@/pages/layout'
 import Map from '@/pages/map'
 import Glb from '@/pages/glb'
 import Animate from '@/pages/animate'
 import Collect from '@/pages/collect'
 import About from '@/pages/about'
+import Home from '@/pages/home'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
         index: true,
-        element: <React.Suspense fallback={<Loading />}>
-          <Home />
-        </React.Suspense>
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <Home />
+          </React.Suspense>
+        ),
       },
       {
-        path: "/map",
-        element: <React.Suspense fallback={<Loading />}>
-          <Map />
-        </React.Suspense>
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <Sphere />
+          </React.Suspense>
+        ),
       },
       {
-        path: "/glb",
-        element: <Glb />
+        path: '/map',
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <Map />
+          </React.Suspense>
+        ),
       },
       {
-        path: "/collect",
-        element: <Collect />
+        path: '/glb',
+        element: <Glb />,
       },
       {
-        path: "/animate",
-        element: <Animate />
+        path: '/collect',
+        element: <Collect />,
       },
       {
-        path: "/about",
-        element: <React.Suspense fallback={<Loading />}>
-          <About />
-        </React.Suspense>
+        path: '/animate',
+        element: <Animate />,
+      },
+      {
+        path: '/about',
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <About />
+          </React.Suspense>
+        ),
       },
     ],
     errorElement: <>错误页面</>,
