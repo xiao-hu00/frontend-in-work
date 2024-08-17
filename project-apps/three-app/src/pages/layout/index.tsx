@@ -34,7 +34,7 @@ const Component: React.FC = () => {
           ))}
         </nav>
       </div>
-      <div className="flex-1 overflow-scroll" style={{ height: 'calc(100vh - 42px)' }}>
+      <div className="flex-1 overflow-auto" style={{ height: 'calc(100vh - 42px)' }}>
         <Outlet />
       </div>
     </div>

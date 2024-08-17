@@ -5,9 +5,6 @@ import { PanelGroup, Panel, PanelResizeHandle, disableGlobalCursorStyles } from 
 
 export default function Home() {
   // disableGlobalCursorStyles()
-  const onChange = (e: any) => {
-    console.log(e)
-  }
   return (
     <div className='flex justify-center'>
       <div className='max-w-[1200px]'>

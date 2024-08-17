@@ -24,6 +24,7 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: '/sphere',
         element: (
           <React.Suspense fallback={<Loading />}>
             <Sphere />
