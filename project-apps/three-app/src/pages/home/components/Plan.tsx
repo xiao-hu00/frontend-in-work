@@ -4,8 +4,10 @@
  * @Description: threejs的平面组件
  */
 import React, { useMemo } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
+import { vertexShader } from '../shader/planVertexShader'
+import { fragmentShader } from '../shader/planFragmentShader'
 
 const Plan: React.FC = () => {
   const settings = useMemo(
@@ -16,35 +18,20 @@ const Plan: React.FC = () => {
     }),
     []
   )
+  // 获取模型宽高
+  const { width, height } = useThree((state) => state.viewport);
+
   useFrame((_, delta) => {
     settings.uTime.value += delta * 0.5
   })
   return (
     <mesh position={[0, 0, 0]}>
-      <planeGeometry args={[1, 1]} />
+      <planeGeometry args={[width, height]} />
       <shaderMaterial
         transparent={true}
         uniforms={settings}
-        vertexShader={
-          /* glsl */ `
-            uniform float uTime;
-            varying vec2 vUv;
-            void main() {
-              vUv = uv;
-              gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.);
-            }
-        `
-        }
-        fragmentShader={
-          /* glsl */ `
-          uniform vec3 uColor;
-          varying vec2 vUv;
-          uniform float uTime;
-          void main() {
-            gl_FragColor = vec4(vUv, 1. * sin(uTime), 1.);
-          }
-        `
-        }
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
       />
     </mesh>
   )
