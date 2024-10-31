@@ -1,26 +1,28 @@
 import Header from './header'
-import {
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-} from '@radix-ui/react-icons'
-import { useMenuStore } from '@/store'
-import { cn } from '@/lib/utils'
+// import {
+//   DoubleArrowLeftIcon,
+//   DoubleArrowRightIcon,
+// } from '@radix-ui/react-icons'
+// import { useMenuStore } from '@/store'
+// import { cn } from '@/lib/utils'
 import { Outlet, useLocation } from 'react-router-dom'
-import { Menu } from '@/components'
+// import { Menu } from '@/components'
 import { motion } from 'framer-motion'
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from '@/components/app-sidebar'
 
 const Layout = () => {
-  const { collapse, updateCollapse } = useMenuStore()
+  // const { collapse, updateCollapse } = useMenuStore()
   const { pathname } = useLocation()
-  const changeMenu = () => {
-    updateCollapse(!collapse)
-  }
+  // const changeMenu = () => {
+  //   updateCollapse(!collapse)
+  // }
 
   return (
     <div
       className='grid h-[100vh] transition-all overflow-auto'
       style={{
-        gridTemplateColumns: collapse ? '4rem 1fr' : '14rem 1fr',
+        gridTemplateColumns: '14rem 1fr',
         gridTemplateRows: '5rem 1fr',
       }}
     >
@@ -30,7 +32,11 @@ const Layout = () => {
           gridTemplateRows: '1fr 2.5rem',
         }}
       >
-        <Menu />
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarTrigger/>
+        </SidebarProvider>
+        {/* <Menu />
         <div
           onClick={changeMenu}
           className={cn(
@@ -38,7 +44,7 @@ const Layout = () => {
           )}
         >
           {collapse ? <DoubleArrowRightIcon /> : <DoubleArrowLeftIcon />}
-        </div>
+        </div> */}
       </aside>
       <header className='bg-[hsl(var(--background))] sticky top-0 z-10 auto-cols-fr'>
         <Header />
